@@ -1,11 +1,14 @@
-# Regshot CLI tool
-uses regsistry crate, only win8.1 and up
+# Regdiff CLI tool
+Small cli tool to get a diff of registry after making a change, usefull for capturing settings from policies etc.
 
 
 ## Usage:
-    `regshot_cli --HKCU`
-    limits capturing regvalues to HKCU hive only
-    `regshot_cli`
+    regdiff --hkcu
+    limits capturing regvalues from HKCU only
+    regsdiff --hklm
+    limits capturing revalues from HKLM only
+    regdiff --hkcu --subkey Console
+    limits capturing regvalues from HKCU\Console only
 ## TODO:
 - Storing snapshot in vector/struct
 - Diff functionality
