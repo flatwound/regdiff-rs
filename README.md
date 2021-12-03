@@ -10,6 +10,7 @@ Currently only supports REG_DWORD and REG_SZ values and the HKEY_LOCAL_MACHINE a
     regdiff --hkcu --subkey Console
     limits capturing regvalues from HKCU\Console only
 ## TODO:
+- Logic to detect removed keys
 - Add other keys such as HKU, HKCR, HKCC
 - Add support for other registry types
 - Code review
