@@ -91,7 +91,10 @@ fn main() {
             let key_root_name = get_key_root_name(key_root);
             key_path.push_str(key_root_name);
             if matches.is_present("subkey") {
-                println!("Processing {:?}", key_root);
+                let subkey_name = matches
+                    .value_of("subkey")
+                    .expect("Failed to get value of subkey, did you provide a valid string?");
+                println!("Processing {}\\{}", key_root_name, subkey_name);
                 ret_val = enumerate_subkeys(
                     *key_root,
                     matches
@@ -101,6 +104,7 @@ fn main() {
                     &mut post_map,
                 )
             } else {
+                println!("Processing {}", key_root_name);
                 ret_val = enumerate_subkeys(*key_root, "", &mut key_path, &mut post_map);
             }
         }
