@@ -33,7 +33,8 @@ Values changed:
     regdiff --hkcu --subkey Console
     limits capturing regvalues from HKCU\Console only
 ## TODO:
-- Logic to detect removed keys
+- Logic to detect added/removed keys
+- Formatting of (default) values
 - Add other keys such as HKU, HKCR, HKCC
 - Add support for other registry types
 - Code review
